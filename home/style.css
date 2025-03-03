@@ -1,0 +1,21 @@
+.letreiro{
+
+    display: flex;
+    margin: auto;
+    width: 500px;
+    height: auto;
+    margin-top: 130px;
+}
+
+.imagem-tomate{
+    display: flex;
+
+    width: 3500px;
+    height: auto;
+    margin-right: 100px;
+}
+
+
+body{
+    background-color: #2B2B2B;
+}
