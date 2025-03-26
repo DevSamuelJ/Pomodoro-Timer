@@ -1,21 +1,153 @@
-.letreiro{
+@import url('https://fonts.googleapis.com/css2?family=Island+Moments&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Island+Moments&family=Italiana&display=swap');
 
-    display: flex;
-    margin: auto;
-    width: 500px;
-    height: auto;
-    margin-top: 130px;
+@keyframes animacao-tomate{
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
 
-.imagem-tomate{
-    display: flex;
 
-    width: 3500px;
-    height: auto;
-    margin-right: 100px;
+
+
+body {
+    background-color: #2B2B2B;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
 }
+
+
 
 
 body{
     background-color: #2B2B2B;
+    height: 100vh;
 }
+.letreiro{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    width: 854.28px;
+    height: 296.54px;
+    transform: translateY(-100px);
+}
+
+
+.div-tomate{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+
+.imagem-tomate{
+
+    width: 500px;
+    height: auto;
+    transform: translateY(-150px);
+
+   
+}
+
+.imagem-tomate:hover{
+    animation: linear infinite;
+    animation-name: animacao-tomate;
+    animation-duration: 2s;
+    
+    /* animation-delay: 1s; */
+}
+
+
+.botao{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-40px);
+    
+    
+}
+
+
+.botao-iniciar{
+    font-size: 48px;
+    font-family: "Italiana", sans-serif;
+    font-style: normal;
+    text-decoration: none;
+    border: 3px  dotted red;
+    border-radius: 60px;
+    padding: 20px 100px 20px 100px;
+    color: white;
+
+}
+
+.botao-iniciar:hover{
+    border: 3px dotted green;
+
+}
+
+.informacoes{
+    display: flex;
+    list-style: none;
+    padding: 20px;
+    
+}
+
+
+.informacoes img{
+    width: 62px;
+    height: 62px;
+}
+
+.contato{
+    margin-right: 4px;
+}
+
+
+
+.autor{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.autor h2{
+    font-size: 48px;
+    font-style: none;
+    font-weight: normal;
+    font-family: "Island Moments", cursive;
+}
+
+
+.duvidas{
+    display:flex;
+    justify-content: flex-end;
+    margin-left: 10px;
+    margin-top: -130px;
+}
+.duvidas img{
+    width: 62;
+    height: 62px;
+    
+}
+
+
+.duvidas a{
+    transform: translate(-110px, 70px);
+    text-decoration: none;
+    font-family: "Italiana", sans-serif;
+    color: white;
+    font-size: 24px;
+}
+
+.duvidas, .informacoes{
+    margin-bottom: -100px;
+}
+
+
