@@ -1,153 +1,289 @@
-@import url('https://fonts.googleapis.com/css2?family=Island+Moments&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Island+Moments&family=Italiana&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Island+Moments&family=Italiana&family=Dancing+Script:wght@600&display=swap');
 
-@keyframes animacao-tomate{
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+@keyframes gira-tomate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
 }
 
-
-
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
     background-color: #2B2B2B;
-    margin: 0;
-    padding: 0;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center; 
-}
-
-
-
-
-body{
-    background-color: #2B2B2B;
-    height: 100vh;
-}
-.letreiro{
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-    width: 854.28px;
-    height: 296.54px;
-    transform: translateY(-100px);
-}
-
-
-.div-tomate{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-}
-
-
-.imagem-tomate{
-
-    width: 500px;
-    height: auto;
-    transform: translateY(-150px);
-
-   
-}
-
-.imagem-tomate:hover{
-    animation: linear infinite;
-    animation-name: animacao-tomate;
-    animation-duration: 2s;
-    
-    /* animation-delay: 1s; */
-}
-
-
-.botao{
-    
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transform: translateY(-40px);
-    
-    
-}
-
-
-.botao-iniciar{
-    font-size: 48px;
+    justify-content: space-between;
     font-family: "Italiana", sans-serif;
-    font-style: normal;
-    text-decoration: none;
-    border: 3px  dotted red;
-    border-radius: 60px;
-    padding: 20px 100px 20px 100px;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 30px 20px 10px;
+}
+
+.titulo-principal {
     color: white;
-
+    font-family: 'Dancing Script', cursive;
+    font-weight: 600;
+    line-height: 0.9;
 }
 
-.botao-iniciar:hover{
-    border: 3px dotted green;
-
+.pomodoro {
+    display: block;
+    font-size: 72px;
+    letter-spacing: 8px;
+    margin-bottom: -10px;
+    transform: rotate(-2deg);
 }
 
-.informacoes{
+.timer {
+    display: block;
+    font-size: 64px;
+    letter-spacing: 6px;
+    transform: rotate(1deg);
+    margin-left: 60px;
+}
+
+/* Main */
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin-top: -30px;
+}
+
+.div-tomate {
+    margin-bottom: 80px;
+}
+
+.imagem-tomate {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    transition: transform 0.4s ease;
+    filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.3));
+}
+
+.imagem-tomate:hover {
+    animation: gira-tomate 2s linear infinite;
+}
+
+.botao-iniciar {
+    font-size: 38px;
+    font-family: "Italiana", sans-serif;
+    text-decoration: none;
+    border: 3px dotted #dc2626;
+    border-radius: 50px;
+    padding: 18px 90px;
+    color: white;
+    transition: all 0.4s ease;
+    display: inline-block;
+    background: linear-gradient(145deg, rgba(220, 38, 38, 0.05), rgba(220, 38, 38, 0.1));
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.botao-iniciar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transition: left 0.6s ease;
+}
+
+.botao-iniciar:hover::before {
+    left: 100%;
+}
+
+.botao-iniciar:hover {
+    border-color: #16a34a;
+    background: linear-gradient(145deg, rgba(22, 163, 74, 0.1), rgba(22, 163, 74, 0.15));
+    transform: scale(1.05) translateY(-2px);
+    box-shadow: 0 8px 25px rgba(22, 163, 74, 0.3);
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    position: relative;
+    background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.1));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.informacoes {
     display: flex;
     list-style: none;
-    padding: 20px;
-    
+    gap: 20px;
+    align-items: center;
+    position: absolute;
+    left: 20px;
 }
 
-
-.informacoes img{
-    width: 62px;
-    height: 62px;
+.informacoes img {
+    width: 48px;
+    height: 48px;
+    transition: all 0.3s ease;
+    filter: grayscale(20%) brightness(0.9);
+    border-radius: 8px;
+    padding: 6px;
+    background: rgba(255, 255, 255, 0.05);
+    cursor: pointer;
 }
 
-.contato{
-    margin-right: 4px;
+.informacoes img:hover {
+    transform: scale(1.15) translateY(-3px);
+    filter: grayscale(0%) brightness(1.1);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
 
+.autor h2 {
+    font-size: 44px;
+    font-family: "Island Moments", cursive;
+    color: #f0f0f0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
 
-
-.autor{
+.duvidas {
+    position: absolute;
+    top: 20px;
+    right: 20px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    
-}
-.autor h2{
-    font-size: 48px;
-    font-style: none;
-    font-weight: normal;
-    font-family: "Island Moments", cursive;
+    gap: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 10px 16px;
+    border-radius: 25px;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
 }
 
-
-.duvidas{
-    display:flex;
-    justify-content: flex-end;
-    margin-left: 10px;
-    margin-top: -130px;
-}
-.duvidas img{
-    width: 62;
-    height: 62px;
-    
+.duvidas:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
 }
 
+.duvidas img {
+    width: 42px;
+    height: 42px;
+    filter: brightness(0.9);
+}
 
-.duvidas a{
-    transform: translate(-110px, 70px);
+.duvidas a {
     text-decoration: none;
     font-family: "Italiana", sans-serif;
-    color: white;
-    font-size: 24px;
+    color: #f0f0f0;
+    font-size: 18px;
+    transition: color 0.3s ease;
+    font-weight: 500;
 }
 
-.duvidas, .informacoes{
-    margin-bottom: -100px;
+.duvidas a:hover {
+    color: #16a34a;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .pomodoro {
+        font-size: 56px;
+        letter-spacing: 4px;
+    }
+    
+    .timer {
+        font-size: 48px;
+        letter-spacing: 3px;
+        margin-left: 40px;
+    }
+    
+    .imagem-tomate {
+        max-width: 320px;
+    }
+    
+    .botao-iniciar {
+        font-size: 32px;
+        padding: 15px 70px;
+    }
+    
+    .autor h2 {
+        font-size: 38px;
+    }
+    
+    footer {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+    
+    .informacoes, .duvidas {
+        position: static;
+        justify-content: center;
+        margin: 0;
+    }
+    
+    .duvidas {
+        background: rgba(255, 255, 255, 0.08);
+    }
+    
+    main {
+        margin-top: -40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .pomodoro {
+        font-size: 44px;
+        letter-spacing: 2px;
+    }
+    
+    .timer {
+        font-size: 38px;
+        letter-spacing: 2px;
+        margin-left: 20px;
+    }
+    
+    .imagem-tomate {
+        max-width: 280px;
+    }
+    
+    .botao-iniciar {
+        font-size: 28px;
+        padding: 12px 50px;
+    }
+    
+    .autor h2 {
+        font-size: 34px;
+    }
+    
+    .duvidas a {
+        font-size: 16px;
+    }
+    
+    main {
+        padding: 10px;
+        margin-top: -30px;
+    }
+    
+    header {
+        padding: 20px 10px 5px;
+    }
+    
+    footer {
+        padding: 15px 10px;
+    }
 }
 
 
