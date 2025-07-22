@@ -9,19 +9,48 @@
 </head>
 <body>
     <header>
-        <h1 class="titulo-principal">
-            <span class="pomodoro">Pomodoro</span>
+        <h1 class="tituloPrincipal">
+            <span class="pomodoro">Pomocode</span>
             <span class="timer">Timer</span>
         </h1>
     </header>
     <main>
-        <div class="div-tomate">
-            <img class="imagem-tomate" src="./assets/tomate.png" alt="imagem de um tomate">
+        <div class="divTomate">
+            <img class="imagemTomate" src="./assets/tomate.png" alt="imagem de um tomate">
         </div>
         <div class="botao">
-            <a class= "botao-iniciar" href="">Iniciar</a>
+            <a class="botaoIniciar" href="">Iniciar</a>
         </div>
     </main>
+    
+    <!-- Modal do Timer -->
+    <div class="modalTimer" id="modalTimer">
+        <div class="conteudoModal">
+            <header class="cabecalhoModal">
+                <h1 class="tituloModal">Pomocode Timer</h1>
+            </header>
+            
+            <div class="containerTimer">
+                <div class="abasTimer">
+                    <button class="botaoAbaAtivo" data-modo="pomodoro">Pomodoro</button>
+                    <button class="botaoAba" data-modo="pausaRapida">Pausa Rápida</button>
+                    <button class="botaoAba" data-modo="pausaLonga">Pausa Longa</button>
+                </div>
+                
+                <div class="visorTimer">
+                    <span class="tempo">25:00</span>
+                </div>
+                
+                <div class="controlesTimer">
+                    <button class="botaoIniciar">Começar</button>
+                    <button class="botaoReset">Reset</button>
+                </div>
+            </div>
+            
+            <button class="fecharModal" id="fecharModal">&times;</button>
+        </div>
+    </div>
+
     <footer>
         <div class="duvidas">
             <img src="./assets/interrogação.png" alt="interrogação">
