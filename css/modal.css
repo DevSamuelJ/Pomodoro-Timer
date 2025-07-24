@@ -1,0 +1,194 @@
+/* =======================
+   POMODORO TIMER - MODAL CSS
+   ======================= */
+
+/* Modal Container */
+.modalTimer {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(8px);
+    z-index: 1000;
+    animation: fadeIn 0.3s ease;
+}
+
+.conteudoModal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(145deg, #3a3a3a, #2a2a2a);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    min-width: 500px;
+    max-width: 90vw;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Header Modal */
+.cabecalhoModal {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.tituloModal {
+    color: #f0f0f0;
+    font-family: 'Dancing Script', cursive;
+    font-size: 32px;
+    font-weight: 600;
+    margin: 0;
+}
+
+/* Timer Container */
+.containerTimer {
+    text-align: center;
+}
+
+/* Abas do Timer */
+.abasTimer {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 40px;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 6px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.botaoAba {
+    padding: 12px 20px;
+    border: none;
+    background: transparent;
+    color: #999;
+    font-family: "Italiana", sans-serif;
+    font-size: 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex: 1;
+    max-width: 140px;
+}
+
+.botaoAba:hover {
+    color: #f0f0f0;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.botaoAbaAtivo {
+    padding: 12px 20px;
+    border: none;
+    background: rgba(220, 38, 38, 0.8);
+    color: white;
+    font-family: "Italiana", sans-serif;
+    font-size: 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex: 1;
+    max-width: 140px;
+    box-shadow: 0 4px 15px rgba(220, 38, 38, 0.3);
+}
+
+/* Visor do Timer */
+.visorTimer {
+    margin: 50px 0;
+}
+
+.tempo {
+    font-size: 96px;
+    font-family: 'Dancing Script', cursive;
+    font-weight: 600;
+    color: #f0f0f0;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    letter-spacing: 4px;
+}
+
+/* Controles do Timer */
+.controlesTimer {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.controlesTimer .botaoIniciar,
+.controlesTimer .botaoReset {
+    padding: 15px 35px;
+    border: 2px dotted;
+    border-radius: 50px;
+    background: transparent;
+    color: white;
+    font-family: "Italiana", sans-serif;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.controlesTimer .botaoIniciar {
+    border-color: #dc2626;
+    background: linear-gradient(145deg, rgba(220, 38, 38, 0.1), rgba(220, 38, 38, 0.2));
+}
+
+.controlesTimer .botaoIniciar:hover {
+    border-color: #16a34a;
+    background: linear-gradient(145deg, rgba(22, 163, 74, 0.1), rgba(22, 163, 74, 0.2));
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(22, 163, 74, 0.3);
+}
+
+.controlesTimer .botaoReset {
+    border-color: #6b7280;
+    background: linear-gradient(145deg, rgba(107, 114, 128, 0.1), rgba(107, 114, 128, 0.2));
+}
+
+.controlesTimer .botaoReset:hover {
+    border-color: #f59e0b;
+    background: linear-gradient(145deg, rgba(245, 158, 11, 0.1), rgba(245, 158, 11, 0.2));
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(245, 158, 11, 0.3);
+}
+
+/* Botão Fechar */
+.fecharModal {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: #999;
+    font-size: 32px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.fecharModal:hover {
+    color: #f0f0f0;
+    background: rgba(255, 255, 255, 0.1);
+    transform: rotate(90deg);
+}
+
+/* Animação do Modal */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        backdrop-filter: blur(0px);
+    }
+    to {
+        opacity: 1;
+        backdrop-filter: blur(8px);
+    }
+}

@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script defer src="script.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="assets/tomate.png">
+    <script defer src="js/script.js"></script>
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/responsive.css">
     <title>Pomodoro by Samuel</title>
 </head>
 <body>
@@ -19,7 +22,7 @@
             <img class="imagemTomate" src="./assets/tomate.png" alt="imagem de um tomate">
         </div>
         <div class="botao">
-            <a class="botaoIniciar" href="">Iniciar</a>
+            <button class="botaoIniciar" href="">Iniciar</button>
         </div>
     </main>
     
@@ -43,7 +46,7 @@
                 
                 <div class="controlesTimer">
                     <button class="botaoIniciar">Começar</button>
-                    <button class="botaoReset">Reset</button>
+                    <button onclick="reset()" class="botaoReset">Reset</button>
                 </div>
             </div>
             

@@ -1,0 +1,138 @@
+/* =======================
+   POMODORO TIMER - RESPONSIVE CSS
+   ======================= */
+
+/* Tablet - 768px */
+@media (max-width: 768px) {
+    /* Header */
+    .pomodoro {
+        font-size: 56px;
+        letter-spacing: 4px;
+    }
+    
+    .timer {
+        font-size: 48px;
+        letter-spacing: 3px;
+        margin-left: 40px;
+    }
+    
+    /* Main */
+    .imagemTomate {
+        max-width: 320px;
+    }
+    
+    main .botaoIniciar {
+        font-size: 32px;
+        padding: 15px 70px;
+    }
+    
+    main {
+        margin-top: -40px;
+    }
+    
+    /* Footer */
+    .autor h2 {
+        font-size: 38px;
+    }
+    
+    footer {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+    
+    .informacoes, .duvidas {
+        position: static;
+        justify-content: center;
+        margin: 0;
+    }
+    
+    .duvidas {
+        background: rgba(255, 255, 255, 0.08);
+    }
+}
+
+/* Mobile - 480px */
+@media (max-width: 480px) {
+    /* Header */
+    header {
+        padding: 20px 10px 5px;
+    }
+    
+    .pomodoro {
+        font-size: 44px;
+        letter-spacing: 2px;
+    }
+    
+    .timer {
+        font-size: 38px;
+        letter-spacing: 2px;
+        margin-left: 20px;
+    }
+    
+    /* Main */
+    main {
+        padding: 10px;
+        margin-top: -30px;
+    }
+    
+    .imagemTomate {
+        max-width: 280px;
+    }
+    
+    main .botaoIniciar {
+        font-size: 28px;
+        padding: 12px 50px;
+    }
+    
+    /* Footer */
+    footer {
+        padding: 15px 10px;
+    }
+    
+    .autor h2 {
+        font-size: 34px;
+    }
+    
+    .duvidas a {
+        font-size: 16px;
+    }
+    
+    /* Modal Responsivo */
+    .conteudoModal {
+        min-width: auto;
+        padding: 30px 20px;
+        margin: 20px;
+    }
+    
+    .tituloModal {
+        font-size: 28px;
+    }
+    
+    .abasTimer {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .botaoAba {
+        max-width: none;
+    }
+    
+    .tempo {
+        font-size: 64px;
+        letter-spacing: 2px;
+    }
+    
+    .controlesTimer {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+    
+    .controlesTimer .botaoIniciar, 
+    .controlesTimer .botaoReset {
+        width: 200px;
+        padding: 12px 20px;
+        font-size: 16px;
+    }
+}
