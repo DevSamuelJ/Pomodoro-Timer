@@ -13,22 +13,24 @@ botaoIniciar.addEventListener("click",()=>{
 // let botaoReset = document.querySelector(".botaoReset")
 
 
-function reset(){
+botaoIniciar.addEventListener('click',()=>{
 
     
     let minutos = 25
     let segundos = 60
-
+    
     let tempo = document.querySelector(".tempo")
     for (let i = 0; i < 60; i++){
     setTimeout(() => {
-
+    
         
         tempo.innerHTML = `24:${i}`
         console.log(i)
         }, 1000*i)
-
-        }
     
+        }
+})
 
-}
+
+
+
