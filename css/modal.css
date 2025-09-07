@@ -117,7 +117,7 @@
     margin-top: 40px;
 }
 
-.controlesTimer .botaoIniciar,
+.controlesTimer .botaoIniciarTimer,
 .controlesTimer .botaoReset {
     padding: 15px 35px;
     border: 2px dotted;
@@ -132,12 +132,12 @@
     overflow: hidden;
 }
 
-.controlesTimer .botaoIniciar {
+.controlesTimer .botaoIniciarTimer {
     border-color: #dc2626;
     background: linear-gradient(145deg, rgba(220, 38, 38, 0.1), rgba(220, 38, 38, 0.2));
 }
 
-.controlesTimer .botaoIniciar:hover {
+.controlesTimer .botaoIniciarTimer:hover {
     border-color: #16a34a;
     background: linear-gradient(145deg, rgba(22, 163, 74, 0.1), rgba(22, 163, 74, 0.2));
     transform: translateY(-2px);

@@ -1,36 +1,42 @@
-const botaoIniciar = document.querySelector(".botaoIniciar")
-botaoIniciar.addEventListener("click",()=>{
-    let modalTimer = document.querySelector(".modalTimer")
-    let display = window.getComputedStyle(modalTimer).display
-    if (display === "none"){
-        modalTimer.style.display = "flex"
-    }
-})
+const botaoIniciar = document.querySelector(".botaoIniciar");
+botaoIniciar.addEventListener("click", () => {
+  let modalTimer = document.querySelector(".modalTimer");
+  // let display = window.getComputedStyle(modalTimer).display
+  // if (display === "none"){
+  modalTimer.style.display = "flex";
+});
 
 // -------- DAQUI PRA BAIXO SÓ TREVAS E ARREPENDIMENTOS...--------
 
-
 // let botaoReset = document.querySelector(".botaoReset")
 
+const botaoIniciarTimer = document.querySelector(".botaoIniciarTimer");
 
-botaoIniciar.addEventListener('click',()=>{
+botaoIniciarTimer.addEventListener("click", () => {
 
-    
-    let minutos = 25
-    let segundos = 60
-    
-    let tempo = document.querySelector(".tempo")
-    for (let i = 0; i < 60; i++){
-    setTimeout(() => {
-    
-        
-        tempo.innerHTML = `24:${i}`
-        console.log(i)
-        }, 1000*i)
-    
-        }
-})
+    let tempo = 1500;
 
+let minutos = Math.floor(tempo/60)
+let segundos = tempo % 60
 
+const intervaloSegundos = setInterval(() => {
+  tempo--;
+  console.log("Passou 1 segundo!", tempo);
+  
+  if(tempo <=0){
+    clearInterval(intervaloSegundos)
+  }
+
+}, 1000);
 
 
+const intervaloMinutos = setInterval(()=>{
+    minutos --
+    console.log(minutos)
+
+    if(minutos <= 0){
+        clearInterval(intervaloMinutos)
+    }
+},60000)
+
+});
