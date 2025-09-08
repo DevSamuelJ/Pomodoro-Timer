@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Island+Moments&family=Jersey+10&display=swap');
+@import "tailwindcss";
+
+
+@layer base {
+    :root{
+        --font-islandMoments: "Island Moments", cursive; 
+
+    }
+    body {
+      font-family: var(--font-islandMoments);
+    }
+    }
+
