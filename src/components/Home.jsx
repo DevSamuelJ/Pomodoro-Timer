@@ -1,5 +1,5 @@
 import Breaks from './elements/Breaks'
-import Counter from './'
+import Counter from '.'
 
 export function Home(){
     return(

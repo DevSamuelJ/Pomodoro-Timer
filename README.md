@@ -1,4 +1,4 @@
-# 🍅 Pomocode Timer
+# 🍅 PomoCode Timer
 
 Um timer Pomodoro minimalista e elegante com design moderno e interface intuitiva.
 
@@ -13,9 +13,8 @@ Um timer Pomodoro minimalista e elegante com design moderno e interface intuitiv
 
 ## 🛠️ Tecnologias Utilizadas
 
-- **HTML5**: Estrutura semântica e acessível
-- **CSS3**: Flexbox, Grid, animações e gradientes modernos
-- **JavaScript**: Funcionalidades interativas (em desenvolvimento)
+- **React (JavaScript)**: Estrutura modularizada e mais dinamica.
+- **Tailwind**: Responsividade mais fluida.
 - **Local Storage**: Manter seu timer salvo mesmo a pagina feche sem querer.
 
 ## 📱 Responsividade
