@@ -1,89 +1,14 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./tomate.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" href="assets/tomate.png" />
-    <script defer src="js/script.js"></script>
-    <link rel="stylesheet" href="css/home.css" />
-    <link rel="stylesheet" href="css/modal.css" />
-    <link rel="stylesheet" href="css/responsive.css" />
-    <title>Pomodoro by Samuel</title>
+      <link href="./index.css" rel="stylesheet">
+    <title>PomoCode</title>
   </head>
   <body>
-    <header>
-      <h1 class="tituloPrincipal">
-        <span class="pomodoro">Pomocode</span>
-        <span class="timer">Timer</span>
-      </h1>
-    </header>
-    <main>
-      <div class="divTomate">
-        <img
-          class="imagemTomate"
-          src="./assets/tomate.png"
-          alt="imagem de um tomate"
-        />
-      </div>
-      <div class="botao">
-        <button class="botaoIniciar" href="">Iniciar</button>
-      </div>
-    </main>
-
-    <!-- Modal do Timer -->
-    <div class="modalTimer" id="modalTimer">
-      <div class="conteudoModal">
-        <header class="cabecalhoModal">
-          <h1 class="tituloModal">Pomocode Timer</h1>
-        </header>
-
-        <div class="containerTimer">
-          <div class="abasTimer">
-            <button class="botaoAbaAtivo" data-modo="pomodoro">Pomodoro</button>
-            <button class="botaoAba" data-modo="pausaRapida">
-              Pausa Rápida
-            </button>
-            <button class="botaoAba" data-modo="pausaLonga">Pausa Longa</button>
-          </div>
-
-          <div class="visorTimer">
-            <span class="tempo" id="minutosTimer">25</span
-            ><span class="tempo">:</span
-            ><span class="tempo" id="segundosTimer">00</span>
-          </div>
-
-          <div class="controlesTimer">
-            <button class="botaoIniciarTimer">Começar</button>
-            <button onclick="reset()" class="botaoReset">Reset</button>
-          </div>
-        </div>
-
-        <button class="fecharModal" id="fecharModal">&times;</button>
-      </div>
-    </div>
-
-    <footer>
-      <div class="duvidas">
-        <img src="./assets/interrogação.png" alt="interrogação" />
-        <a href="">Como funciona?</a>
-      </div>
-
-      <ul class="informacoes">
-        <li>
-          <img class="contato" src="./assets/github.png" alt="logo-github" />
-        </li>
-        <li>
-          <img
-            class="contato"
-            src="./assets/linkedin.png"
-            alt="logo-linkedin"
-          />
-        </li>
-      </ul>
-
-      <div class="autor">
-        <h2>By Samuel J</h2>
-      </div>
-    </footer>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
